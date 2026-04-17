@@ -29,7 +29,9 @@ local _cmds = {
 _cmds.Universal = _cmds.Solara
 local _E = _cmds[_executor] or _cmds.Universal
 RCCs.Scripts = {}
-local _DSIC = {    "[\u0400-\u04FF]", --[[ Cyrillic \ Russian \ Ukrainian \ Belarusian \ etc ]] }
+local _DSIC = {
+    "[\u{0400}-\u{04FF}]", -- Cyrillic
+}
 --[[ Not Tested !
     "[\u0600-\u06FF]", -- Arabic
     "[\u4E00-\u9FFF]", -- CJK Unified Ideographs
