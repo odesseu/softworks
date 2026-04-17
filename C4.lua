@@ -1,4 +1,4 @@
---[[ C4 System | by S7 softworks | https://github.com/misterlerp/s7nc.softworks | License: S7L 1.0 ]]
+--[[ C4 System | by S7 softworks | https://github.com/misterlerp/s7nc.softworks | License: S7M 1.0 ]]
 
 local assetId = "rbxassetid://128278777324449"
 local UIS = game:GetService("UserInputService")

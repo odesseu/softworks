@@ -1,4 +1,4 @@
---[[ RCCs Modify - RConsole Command Shortner Pro | by S7 softworks | https://github.com/misterlerp/s7nc.softworks | License: S7SL ]]
+--[[ RCCs Modify - RConsole Command Shortner Pro | by S7 softworks | https://github.com/misterlerp/s7nc.softworks | License: S7M 1.0 ]]
 
 local RCCs = {}
 local _executor = (identifyexecutor and identifyexecutor())
