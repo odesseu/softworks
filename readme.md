@@ -1,8 +1,13 @@
-S7NC Softworks for another peoples !
-
 **RCCs**
 RConsole Commands Shortner 
 Just shortner for commands
+
+Version's :
+```text
+Light - Classic version, without save run code.
+Pro   - Upgraded Version, with save run code.
+src (RCCs.lua) - Stable version, universal.
+```
 
 **Elua**
 Electronic Lua 

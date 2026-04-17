@@ -104,11 +104,12 @@ local function _dsic_check(code)
 end
 
 local _aliases = {
-    ["^%s*title%((.-)%)%s*$"]  = function(a) return "RCCs.name("  .. a .. ")" end,
-    ["^%s*print%((.-)%)%s*$"]  = function(a) return "RCCs.print(" .. a .. ")" end,
-    ["^%s*warn%((.-)%)%s*$"]   = function(a) return "RCCs.warn("  .. a .. ")" end,
-    ["^%s*info%((.-)%)%s*$"]   = function(a) return "RCCs.info("  .. a .. ")" end,
-    ["^%s*error%((.-)%)%s*$"]  = function(a) return "RCCs.error(" .. a .. ")" end,
+    ["^%s*transfer%(%s*%)%s*$"] = function() return "RCCs.transfer()"          end,
+    ["^%s*title%((.-)%)%s*$"]  = function(a) return "RCCs.name("  .. a .. ")"  end,
+    ["^%s*print%((.-)%)%s*$"]  = function(a) return "RCCs.print(" .. a .. ")"  end,
+    ["^%s*warn%((.-)%)%s*$"]   = function(a) return "RCCs.warn("  .. a .. ")"  end,
+    ["^%s*info%((.-)%)%s*$"]   = function(a) return "RCCs.info("  .. a .. ")"  end,
+    ["^%s*error%((.-)%)%s*$"]  = function(a) return "RCCs.error(" .. a .. ")"  end,
     ["^%s*destroy%(%s*%)%s*$"] = function()  return "RCCs.destroy()"           end,
     ["^%s*clear%(%s*%)%s*$"]   = function()  return "RCCs.clear()"             end,
 }
@@ -135,7 +136,7 @@ end
 local function _run(code, ctx)
     local ok, reason = _dsic_check(code)
     if not ok then
-        _E.warn("[RCCs] DSIC blocked: " .. reason)
+            print("[RCCs] DSIC blocked: " .. reason)  --[[ Disabled for time _E.warn("[RCCs] DSIC blocked: " .. reason) ]]
         return
     end
 
@@ -145,24 +146,22 @@ local function _run(code, ctx)
 
     local fn, err = loadstring(processed)
     if not fn then
-        _E.warn("[RCCs] Parse error: " .. tostring(err))
+         print("[RCCs] Parse error: " .. tostring(err))  --[[ Disabled for time _E.warn("[RCCs] Parse error: " .. tostring(err)) ]]
         return
     end
     setfenv(fn, env)
     fn()
 end
 
-function RCCs.print(...)   _E.print(...)   end
-function RCCs.warn(...)    _E.warn(...)    end
-function RCCs.error(...)   _E.error(...)   end
-function RCCs.info(...)    _E.info(...)    end
-function RCCs.destroy(...) _E.destroy(...) end
-function RCCs.name(...)    _E.name(...)    end
-function RCCs.input(...)   _E.input(...)   end
-function RCCs.clear(...)   _E.clear(...)   end
-function RCCs.Run(code, ctx)
-    _run(code, ctx)
-end
+function RCCs.print(...)        _E.print(...)   end
+function RCCs.warn(...)         _E.warn(...)    end
+function RCCs.error(...)        _E.error(...)   end
+function RCCs.info(...)         _E.info(...)    end
+function RCCs.destroy(...)      _E.destroy(...) end
+function RCCs.name(...)         _E.name(...)    end
+function RCCs.input(...)        _E.input(...)   end
+function RCCs.clear(...)        _E.clear(...)   end
+function RCCs.Run(code, ctx)    _run(code, ctx) end
 
 function RCCs.Auto(code, ctx)
     local _prev = _E
