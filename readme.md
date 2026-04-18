@@ -1,4 +1,4 @@
-**RCCs**
+# RCCs
 RConsole Commands Shortner 
 Just shortner for commands
 
@@ -8,7 +8,7 @@ Light - Classic version, without save run code.
 Pro   - Upgraded Version, with save run code.
 src (RCCs.lua) - Stable version, universal.
 ```
-**Accesoary Editor**
+# Accesoary Editor
 Actual Version : 1.0.1 | 18.04.2026
 Editor for accesoary's
 
