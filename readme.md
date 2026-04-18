@@ -1,4 +1,4 @@
-![S7Banner](banner.png)
+![S7Banner](assets/banner.png)
 ![DevTeam](https://img.shields.io/badge/Developers%20%7C-S7%20Softworks-6e6e6e?labelColor=cfcfcf)
 ![License](https://img.shields.io/badge/Software%20License-SL%201.0-6e6e6e?labelColor=cfcfcf)
 # RCCs
@@ -22,3 +22,5 @@ Maybe soon convertator Lua to ELua when ELua been released !
 
 
 Thanks for using our projects !
+
+![Credits](assets/credits.png)
