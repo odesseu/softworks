@@ -1,3 +1,6 @@
+![S7Banner](banner.png)
+![DevTeam](https://img.shields.io/badge/Developers%20%7C-S7%20Softworks-6e6e6e?labelColor=cfcfcf)
+![License](https://img.shields.io/badge/Software%20License7C-S7M%201.0-6e6e6e?labelColor=cfcfcf)
 # RCCs
 RConsole Commands Shortner 
 Just shortner for commands
