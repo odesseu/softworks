@@ -23,4 +23,4 @@ Maybe soon convertator Lua to ELua when ELua been released !
 
 Thanks for using our projects !
 
-![Credits](assets/credits.png)
+![Credits](assets/Сredits.png)
