@@ -529,7 +529,7 @@ async function sendMsg() {
     const payload = buildPayload();
     status.textContent = 'Отправляю...';
     try {
-      const res = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages`, {
+      const res = await fetch(`https://dems.velori.workers.dev/channels/${channelId}/messages`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bot ${token}` },
         body: JSON.stringify(payload)
